@@ -2,7 +2,7 @@ import {eventErrorsInitialState} from './inintialStates';
 import {tEvent} from './types';
 
 export const validateEditEvent = (data: tEvent) => {
-  let errors = {...eventErrorsInitialState};
+  const errors = {...eventErrorsInitialState};
 
   // [] provides that special characters worth only 1 in length
   if ([...data.title].length > 100) {
