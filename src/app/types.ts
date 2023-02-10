@@ -15,14 +15,6 @@ export type tCalendarSettings = {
   dateTimeDisplay: string;
 };
 
-// type for importance list of event
-export type tEventImportance = {
-  Basic: string;
-  Moderate: string;
-  High: string;
-  Crucial: string;
-};
-
 // type for country list
 export type tCountryList = string[];
 

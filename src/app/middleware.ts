@@ -158,13 +158,14 @@ function calculatePositions(intradayEvents: tIntradayEvent[]) {
     events: [],
   };
 
+  // looping through intraday events
   intradayEvents.forEach(event => {
-    // if next event row start is after the end row of intraday event block, then a new intraday event block is created and the old one is pushed into data intraday array
+    // if next event row start is after the end row of intraday event block, then a new intraday event block is created and the old one is pushed into data intraday event block array
     if (
       intradayEventBlock.rowStart !== intradayEventBlock.rowEnd &&
       intradayEventBlock.rowEnd <= event.rowStart
     ) {
-      // push previous intraday event block object into intraday data
+      // push previous intraday event block object into intraday event blocks array
       intradayEventBlocks.push(intradayEventBlock);
       // reset the intraday event block
       intradayEventBlock = {

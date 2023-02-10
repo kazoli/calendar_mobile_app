@@ -4,7 +4,7 @@ import {
   tCountryList,
   tEvent,
   tEventErrors,
-  tEventImportance,
+  tKeyValueObject,
 } from './types';
 import {formatDate, getDeviceLocale} from './useful';
 
@@ -47,7 +47,7 @@ export const eventErrorsInitialState: tEventErrors = {
 };
 
 // importance list for event
-export const eventImportance: tEventImportance = {
+export const eventImportance: tKeyValueObject = {
   Basic: '#d2ffe0',
   Moderate: '#fffed2',
   High: '#ffead2',
