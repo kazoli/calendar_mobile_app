@@ -24,6 +24,8 @@ export const calendarReducer = (
         Math.floor(
           Math.pow(10, 12) + Math.random() * 9 * Math.pow(10, 12),
         ).toString(36);
+      // remove spaces around title string
+      action.payload.title = action.payload.title.trim();
       // reorder events according to start dates
       const createdEvents = alphabetReorder(
         [...state.allEvents, action.payload] as tKeyValueObject[],
@@ -39,6 +41,9 @@ export const calendarReducer = (
       state.allEvents = createdEvents as tCalendarState['allEvents'];
       return state;
     case tCalendarActionTypes.updateEvent:
+      // remove spaces around title string
+      action.payload.title = action.payload.title.trim();
+      // replacing previous event data with the updated one
       state.allEvents = state.allEvents.map(event =>
         event.id === action.payload.id ? action.payload : event,
       );

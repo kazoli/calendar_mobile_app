@@ -46,7 +46,7 @@ function ShowEvent(props: tProps) {
     <ScrollView style={styleShowEvent.mainWrapper}>
       <ShowEventDataBlock
         label="Title"
-        data={selectedEvent.title}
+        data={selectedEvent.title.length ? selectedEvent.title : 'No title'}
         importance={selectedEvent.importance}
       />
       <ShowEventDataBlock

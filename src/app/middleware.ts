@@ -41,7 +41,7 @@ const calculateRowPosition = (
   );
 };
 
-// calculate an event time interval length
+// calculate an event time interval length in days
 function calculateIntervalDays(endTimeStamp: number, startTimeStamp: number) {
   return 1 + Math.floor((endTimeStamp - startTimeStamp) / 86400000);
 }
@@ -77,14 +77,18 @@ function sortEvents(calendarState: tCalendarState) {
         return;
       } else {
         // current day crosses the date interval of event
+        // adding No title text instead of empty title
+        event.title = event.title.length ? event.title : 'No title';
         // get event interval length in days
         const intervalDays = calculateIntervalDays(
           eventEndTimeStamp,
           eventStartTimeStamp,
         );
         // which day is the current one in the interval
-        const currentDay =
-          1 + Math.floor((dayEndTimeStamp - eventStartTimeStamp) / 86400000);
+        const currentDay = calculateIntervalDays(
+          dayEndTimeStamp,
+          eventStartTimeStamp,
+        );
         // adding interval data to title
         event.title = `${event.title} (Days: ${intervalDays}/${currentDay})`;
         if (dayEndTimeStamp - eventEndTimeStamp < 0) {
@@ -106,6 +110,8 @@ function sortEvents(calendarState: tCalendarState) {
         // event is later than selected date so continue with next event
         return;
       } else {
+        // adding No title text instead of empty title
+        event.title = event.title.length ? event.title : 'No title';
         if (eventEndTimeStamp > dayEndTimeStamp) {
           // event crosses the current day
           // get event interval length in days
