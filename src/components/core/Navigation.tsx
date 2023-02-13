@@ -3,11 +3,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {tCalendarScreenNames} from '../../app/types';
 import HeaderNavCalendar from '../header/HeaderNavCalendar';
+import HeaderNavEditEvent from '../header/HeaderNavEditEvent';
+import HeaderNavShowEvent from '../header/HeaderNavShowEvent';
 import Calendar from '../screens/Calendar';
 import EditEvent from '../screens/EditEvent';
 import ShowEvent from '../screens/ShowEvent';
-import HeaderNavEditEvent from '../header/HeaderNavEditEvent';
-import HeaderNavShowEvent from '../header/HeaderNavShowEvent';
 
 const Stack = createStackNavigator();
 

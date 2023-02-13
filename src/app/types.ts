@@ -18,7 +18,7 @@ export type tCalendarSettings = {
 // type for country list
 export type tCountryList = string[];
 
-// types of routes of calendar
+// types of screen names of calendar
 export enum tCalendarScreenNames {
   calendar = 'Calendar',
   newEvent = 'Add a new event',
