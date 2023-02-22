@@ -32,7 +32,7 @@ function CalendarCrossDayEvents(props: tProps) {
     } else {
       setFilteredEvents(props.events);
     }
-  }, [props.events, showAll, isHiddenEvents, setFilteredEvents]);
+  }, [props.events, showAll, isHiddenEvents]);
 
   return (
     <View style={styleCalendar.crossDayEventWrapper}>

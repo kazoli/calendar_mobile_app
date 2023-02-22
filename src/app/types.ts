@@ -81,8 +81,8 @@ export type tIntradayEventsBlock = {
 
 // type processed data
 export type tCalendarProcessedData = {
-  intraday: tIntradayEventsBlock[];
   crossDay: tCrossDayEvent[];
+  intraday: tIntradayEventsBlock[];
 };
 
 // types of actions for calendar reducer

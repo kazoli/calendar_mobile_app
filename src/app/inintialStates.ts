@@ -18,8 +18,8 @@ export const calendarSettings: tCalendarSettings = {
   crossDayMaxRows: 3, // cross day event rows maximum number
   dateBackend: 'YYYY-MM-DD', // calendar backend date format
   dateDisplay: 'DD - MM - YYYY', // calendar displayed date format
-  dateTimeBackend: 'YYYY-MM-DDTHH:mm', // calendar backend date-time format
-  dateTimeDisplay: 'DD-MM-YYYY hh:mm A', // calendar displayed date-time format
+  dateTimeBackend: 'YYYY-MM-DDTHH:mm', // calendar backend date-time format (HH means 24-hour format)
+  dateTimeDisplay: 'DD-MM-YYYY hh:mm A', // calendar displayed date-time format (hh means 12-hour format)
 };
 
 // calendar initial state

@@ -120,7 +120,7 @@ function sortEvents(calendarState: tCalendarState) {
             eventStartTimeStamp,
           );
           event.title = `${event.title} (Days: ${intervalDays}/1)`;
-          // event will end not in current day so changing end time stamp for later processing
+          // event will not end in current day so changing end time stamp for later processing
           eventEndTimeStamp = dayEndTimeStamp;
         }
       }
@@ -160,7 +160,7 @@ function calculatePositions(intradayEvents: tIntradayEvent[]) {
 
   // looping through intraday events
   intradayEvents.forEach(event => {
-    // if next event row start is after the end row of intraday event block, then a new intraday event block is created and the old one is pushed into data intraday event block array
+    // if next event row start is after the end row of intraday event block, then a new intraday event block is created and the old one is pushed into intraday event block array
     if (
       intradayEventBlock.rowStart !== intradayEventBlock.rowEnd &&
       intradayEventBlock.rowEnd <= event.rowStart
