@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {calendarSettings} from '../app/inintialStates';
 
-// static style
 export const styleCalendar = StyleSheet.create({
   mainWrapper: {
     height: '100%',
