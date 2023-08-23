@@ -1,8 +1,8 @@
-#DESCRIPTION
+# DESCRIPTION
 
 Calendar mobile app created in React Native with Typescript, useReducer and useContext hooks based global state managment and JSS styling.
 
-#FEATURES
+# FEATURES
 
 1. A day can be selected by a date selector on the top of the calendar
 2. New event can be added besides the date selector by clicking on the icon of top-right corner
@@ -13,13 +13,13 @@ Calendar mobile app created in React Native with Typescript, useReducer and useC
 7. Deletion or editing of an opened event can be found if you click on the top-right menu
 8. Importance is shown by a related color in the calendar
 
-#BEFORE RUN ANY CODE
+# BEFORE RUN ANY CODE
 
 1. Check out the setup of development enviroment: https://reactnative.dev/docs/environment-setup
 2. Clone / download codes and use a command line, enter in the main folder and install packages: "npm i"
 3. To bundle and run on IOS you may need to run 'npx pod-install' to work correctly
 
-#RUN THE APP
+# RUN THE APP
 
 1. Use a command line, enter in the main folder and run this command to start metro: "npm start"
 2. Use an other parallel command line, enter in the main folder and run this command to build your app: "npm run android"
